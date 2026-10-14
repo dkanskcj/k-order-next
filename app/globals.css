@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  font-family: "Pretendard-Regular" !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .fcenter {
+    @apply flex justify-center items-center;
+  }
+
+  .fbetween {
+    @apply flex justify-between items-center
+  }
+
+  .mcenter {
+    @apply mx-auto my-0;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -ms-overflow-style: none;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-low: 320px;
+  --breakpoint-xsm: 430px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-half: 2240px;
+
+  --color-primary: #F12147;
 }
