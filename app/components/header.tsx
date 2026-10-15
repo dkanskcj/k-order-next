@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment } from 'react/jsx-runtime';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,6 +12,7 @@ interface menuListDTO {
 }
 
 function Header() {
+    const router = useRouter();
     const location = usePathname();
     const emnuLists: menuListDTO[] = [
         {
@@ -33,7 +34,7 @@ function Header() {
 
     return (
         <header className="header fbetween low:px-3 md:px-0">
-            <div className='relative min-w-24 max-xsm:max-w-24 w-50 h-full min-h-20 cursor-pointer' >
+            <div className='relative min-w-24 max-xsm:max-w-24 w-50 h-full min-h-20 cursor-pointer' onClick={() => { router.push('/') }}>
                 <Image fill src="/logo.svg" alt="" />
             </div>
             <div className='flex lg:gap-4'>
