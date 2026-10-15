@@ -14,7 +14,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <div className='w-full sm:max-w-160 md:max-w-3xl lg:max-w-5xl max-w-306 mcenter'>
+          <Header />
+        </div>
+        <main>
+          {children}
+        </main>
+        <div className='w-full'>
+          {/* <Footer /> */}
+        </div>
       </body>
     </html>
   );
