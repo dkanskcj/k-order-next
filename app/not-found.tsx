@@ -14,12 +14,13 @@ function NotFound() {
             setNum((prev) => prev - 1);
         }, 1000);
 
-        setTimeout(() => {
+        const location = setTimeout(() => {
             redirect.push('/');
         }, 3000)
 
         return () => {
-            clearInterval(time)
+            clearInterval(time);
+            clearTimeout(location);
         }
     }, []);
 
