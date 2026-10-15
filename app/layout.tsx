@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 
 export const metadata: Metadata = {
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      className="h-full antialiased"
+      className="h-full"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="w-screen h-screen flex flex-col justify-start select-none pt-7 space-y-7">
         <div className='w-full sm:max-w-160 md:max-w-3xl lg:max-w-5xl max-w-306 mcenter'>
           <Header />
         </div>
@@ -21,19 +22,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <div className='w-full'>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>
   );
 }
-
-// export default function RootLayout({ children }: { children: React.ReactNode }) {
-//   return (
-//     <div>
-//       <Header />
-//       <main>{children}</main>
-//       {/* <footer>Footer</footer> */}
-//     </div>
-//   );
-// }

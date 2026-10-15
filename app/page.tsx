@@ -20,8 +20,6 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex flex-col justify-start select-none pt-7 space-y-7">
-      <Main />
-    </div>
+    <Main />
   );
 }
