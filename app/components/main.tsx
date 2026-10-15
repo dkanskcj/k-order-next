@@ -559,8 +559,8 @@ function Main() {
                                             {
                                                 res.img.length > 1 ?
                                                     <div className='flex gap-2 relative'>
-                                                        <Image width={370} height={242.86} className='absolute' ref={e => mobileImgs.current[0] = e!} src={`${res.img[0]}`} alt="" />
-                                                        <Image width={370} height={242.86} ref={e => mobileImgs.current[1] = e!} src={`${res.img[1]}`} alt="" />
+                                                        <Image width={370} height={242.86} className='absolute' ref={(e) => { mobileImgs.current[0] = e!}} src={`${res.img[0]}`} alt="" />
+                                                        <Image width={370} height={242.86} ref={(e) => { mobileImgs.current[1] = e!}} src={`${res.img[1]}`} alt="" />
                                                     </div>
                                                     :
                                                     <Image width={370} height={242.86} src={`${res.img[0]}`} alt="" />
@@ -736,25 +736,25 @@ function Main() {
                                     slidesToShow={2}
                                     slidesToScroll={1}
                                 >
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[0] = e!} className='img01' src="/kmachine01.svg" alt="" />
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[1] = e!} className='img02' src="/kmachine02.svg" alt="" />
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[2] = e!} className='img03' src="/kmachine03.svg" alt="" />
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[3] = e!} className='img04' src="/kmachine04.svg" alt="" />
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[4] = e!} className='img05' src="/kmachine05.svg" alt="" />
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[5] = e!} className='img06' src="/kmachine06.svg" alt="" />
-                                    <Image width={452} height={360} ref={e => paradigmImgs.current[6] = e!} className='img07' src="/kmachine07.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[0] = e!}} className='img01' src="/kmachine01.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[1] = e!}} className='img02' src="/kmachine02.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[2] = e!}} className='img03' src="/kmachine03.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[3] = e!}} className='img04' src="/kmachine04.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[4] = e!}} className='img05' src="/kmachine05.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[5] = e!}} className='img06' src="/kmachine06.svg" alt="" />
+                                    <Image width={452} height={360} ref={(e) => { paradigmImgs.current[6] = e!}} className='img07' src="/kmachine07.svg" alt="" />
                                 </Slider>
                             </div>
                             :
                             <div className='relative paradigmImgs w-full flex justify-center gap-5 mob'>
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[0] = e!} className='img01 absolute' src="/kmachine01.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[0] = e!}} className='img01 absolute' src="/kmachine01.svg" alt="" />
                                 {/* 공간 차지 용도로 absolute 제외 */}
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[1] = e!} className='img02 ' src="/kmachine02.svg" alt="" />
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[2] = e!} className='img03 absolute' src="/kmachine03.svg" alt="" />
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[3] = e!} className='img04 absolute' src="/kmachine04.svg" alt="" />
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[4] = e!} className='img05 absolute' src="/kmachine05.svg" alt="" />
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[5] = e!} className='img06 absolute' src="/kmachine06.svg" alt="" />
-                                <Image width={452} height={360} ref={e => paradigmImgs.current[6] = e!} className='img07 absolute' src="/kmachine07.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[1] = e!}} className='img02 ' src="/kmachine02.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[2] = e!}} className='img03 absolute' src="/kmachine03.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[3] = e!}} className='img04 absolute' src="/kmachine04.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[4] = e!}} className='img05 absolute' src="/kmachine05.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[5] = e!}} className='img06 absolute' src="/kmachine06.svg" alt="" />
+                                <Image width={452} height={360} ref={(e) => { paradigmImgs.current[6] = e!}} className='img07 absolute' src="/kmachine07.svg" alt="" />
                             </div>
                     }
                 </div>
@@ -770,29 +770,29 @@ function Main() {
                 </div>
                 <div className='max-w-228 mcenter space-y-5 low:px-3 lg:px-0'>
                     <div className='low:space-y-5 sm:flex justify-center items-center gap-5'>
-                        <div ref={e => suggestElements.current[0] = e!} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
+                        <div ref={(e) => { suggestElements.current[0] = e!}} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
                             <div className='rounded-2xl overflow-hidden bg-[#F9FAFC]'>
-                                <Image width={92} height={92} ref={e => suggestImgElements.current[0] = e!} src="/icons/note.svg" alt="" />
+                                <Image width={92} height={92} ref={(e) => { suggestImgElements.current[0] = e!}} src="/icons/note.svg" alt="" />
                             </div>
                             <div className='leading-12.5 text-base font-medium'>노래주점, 노래타운</div>
                         </div>
-                        <div ref={e => suggestElements.current[1] = e!} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
+                        <div ref={(e) => { suggestElements.current[1] = e!}} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
                             <div className='rounded-2xl overflow-hidden bg-[#F9FAFC]'>
-                                <Image width={92} height={92} ref={e => suggestImgElements.current[1] = e!} src="/icons/cafe.svg" alt="" />
+                                <Image width={92} height={92} ref={(e) => { suggestImgElements.current[1] = e!}} src="/icons/cafe.svg" alt="" />
                             </div>
                             <div className='leading-12.5 text-base font-medium'>카페&코인 노래방</div>
                         </div>
                     </div>
                     <div className='low:space-y-5 sm:flex justify-center items-center gap-5'>
-                        <div ref={e => suggestElements.current[2] = e!} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
+                        <div ref={(e) => { suggestElements.current[2] = e!}} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
                             <div className='rounded-2xl overflow-hidden bg-[#F9FAFC]'>
-                                <Image width={92} height={92} ref={e => suggestImgElements.current[2] = e!} src="/icons/mic.svg" alt="" />
+                                <Image width={92} height={92} ref={(e) => { suggestImgElements.current[2] = e!}} src="/icons/mic.svg" alt="" />
                             </div>
                             <div className='leading-12.5 text-base font-medium'>일반 노래방</div>
                         </div>
-                        <div ref={e => suggestElements.current[3] = e!} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
+                        <div ref={(e) => { suggestElements.current[3] = e!}} className='w-full flex justify-start items-center gap-6 low:p-2 lg:p-5 bg-white rounded-2xl'>
                             <div className='rounded-2xl overflow-hidden bg-[#F9FAFC]'>
-                                <Image width={92} height={92} ref={e => suggestImgElements.current[3] = e!} src="/icons/pc.svg" alt="" />
+                                <Image width={92} height={92} ref={(e) => { suggestImgElements.current[3] = e!}} src="/icons/pc.svg" alt="" />
                             </div>
                             <div className='leading-12.5 text-base font-medium'>PC방&코인 노래방</div>
                         </div>

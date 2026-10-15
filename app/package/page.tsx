@@ -17,7 +17,7 @@ function KPackage() {
     const kWebDescDetailElements = useRef<HTMLDivElement[]>([]);
     const kRemoteDescElements = useRef<HTMLDivElement[]>([]);
     const kRemoteDescDetailElements = useRef<HTMLDivElement[]>([]);
-    const carouselElement = useRef<HTMLDivElement>();
+    const carouselElement = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -141,7 +141,7 @@ function KPackage() {
                         {
                             kPos.map((res, index) => {
                                 return <Fragment key={res.idx}>
-                                    <div ref={e => kPosDescElements.current[index] = e!} className='kPosFeatDetail w-76.5 flex justify-center items-center border-r rounded-2xl border-[#F0F2F5]'>
+                                    <div ref={(e) => { kPosDescElements.current[index] = e! }} className='kPosFeatDetail w-76.5 flex justify-center items-center border-r rounded-2xl border-[#F0F2F5]'>
                                         <div className='flex flex-col justify-center items-center text-center py-2 space-y-4'>
                                             <div className='w-fit px-3 py-1 rounded-full bg-[#EAEBF9] text-xs font-semibold text-[#2837C0]'>{`${res.idx}`.padStart(2, '0')}</div>
                                             <div className='text-[19px] font-semibold'>{res.content}</div>
@@ -156,7 +156,7 @@ function KPackage() {
                     {
                         kPosDesc.map((res, index) => {
                             return <Fragment key={res.idx}>
-                                <div ref={e => kPosDescDetailElements.current[index] = e!} className='flex items-center low:p-3 xsm:p-4 lg:p-5 gap-2 rounded-lg bg-[#F9FAFC] break-keep'>
+                                <div ref={(e) => { kPosDescDetailElements.current[index] = e! }} className='flex items-center low:p-3 xsm:p-4 lg:p-5 gap-2 rounded-lg bg-[#F9FAFC] break-keep'>
                                     <Image width={20} height={21} src='/icons/blueCheck.svg' alt="" />
                                     <div>{res.content}</div>
                                 </div>
@@ -183,11 +183,11 @@ function KPackage() {
                     </div>
                 </div>
             </div>
-            <div ref={e => carouselElement.current = e!} className='flex low:flex-col lg:flex-row justify-center items-center py-6'>
+            <div ref={(e) => { carouselElement.current = e! }} className='flex low:flex-col lg:flex-row justify-center items-center py-6'>
                 {
                     kWebMain.map((res, index) => {
                         return <Fragment key={res.idx}>
-                            <div ref={e => kWebDescElements.current[index] = e!} className='w-76.5 h-full flex flex-col justify-center items-center space-y-4'>
+                            <div ref={(e) => { kWebDescElements.current[index] = e! }} className='w-76.5 h-full flex flex-col justify-center items-center space-y-4'>
                                 <div className='h-70 flex justify-center items-center py-2.5'><Image width={127} height={260} src={res.img} alt="" /></div>
                                 <div className='h-full flex flex-col justify-start items-center text-center py-2 space-y-4'>
                                     <div className='w-fit px-3 py-1 rounded-full bg-[#FEEEF1] text-xs font-semibold text-primary'>{`${res.idx}`.padStart(2, '0')}</div>
@@ -203,7 +203,7 @@ function KPackage() {
                 {
                     kWebDesc.map((res, index) => {
                         return <Fragment key={res.idx}>
-                            <div ref={e => kWebDescDetailElements.current[index] = e!} className='flex items-center p-5 gap-2 rounded-lg bg-[#F9FAFC]'>
+                            <div ref={(e) => { kWebDescDetailElements.current[index] = e! }} className='flex items-center p-5 gap-2 rounded-lg bg-[#F9FAFC]'>
                                 <Image width={20} height={21} src='/icons/blueCheck.svg' alt="" />
                                 <div>{res.content}</div>
                             </div>
@@ -233,7 +233,7 @@ function KPackage() {
                 {
                     kRemoteMain.map((res, index) => {
                         return <Fragment key={res.idx}>
-                            <div ref={e => kRemoteDescElements.current[index] = e!} className='w-76.5 flex flex-col justify-center items-center low:space-y-1 lg:space-y-4'>
+                            <div ref={(e) => { kRemoteDescElements.current[index] = e! }} className='w-76.5 flex flex-col justify-center items-center low:space-y-1 lg:space-y-4'>
                                 <div className='h-70 flex justify-center items-center py-2.5'><Image width={120} height={255} src={res.img} alt="" /></div>
                                 <div className='flex flex-col justify-center items-center text-center py-2 space-y-4'>
                                     <div className='w-fit px-3 py-1 rounded-full bg-[#FEEEF1] text-xs font-semibold text-primary'>{`${res.idx}`.padStart(2, '0')}</div>
@@ -248,7 +248,7 @@ function KPackage() {
                 {
                     kRemoteDesc.map((res, index) => {
                         return <Fragment key={res.idx}>
-                            <div ref={e => kRemoteDescDetailElements.current[index] = e!} className='flex items-center p-5 gap-2 rounded-lg bg-[#F9FAFC]'>
+                            <div ref={(e) => { kRemoteDescDetailElements.current[index] = e! }} className='flex items-center p-5 gap-2 rounded-lg bg-[#F9FAFC]'>
                                 <Image width={20} height={21} src='/icons/blueCheck.svg' alt="" />
                                 <div>{res.content}</div>
                             </div>
