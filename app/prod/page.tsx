@@ -33,16 +33,16 @@ function Prod() {
     }, []);
 
     return (
-        <div className='w-full pb-[4.5rem] flex flex-col justify-center items-center space-y-10'>
-            <div className='title pt-[4.5rem] text-center space-y-[6px]'>
+        <div className='w-full pb-18 flex flex-col justify-center items-center space-y-10'>
+            <div className='title pt-18 text-center space-y-1.5'>
                 <div className='text-xl text-primary font-medium'>
                     케이오더
                 </div>
-                <div className='text-4xl font-semibold whitespace-pre-wrap leading-[54px]'>
+                <div className='text-4xl font-semibold whitespace-pre-wrap leading-13.5'>
                     상품안내
                 </div>
             </div>
-            <div className='prod max-w-[912px] mcenter low:space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-5'>
+            <div className='prod max-w-228 mcenter low:space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-5'>
                 {
                     prodList.map((res) => {
                         return <Fragment key={res.idx}>
@@ -70,38 +70,38 @@ function Prod() {
                                         <div className='space-y-1'>
                                             <div className='text-primary font-medium text-lg'>케이오더</div>
                                             <div className='flex justify-start items-center gap-3'>
-                                                <div className='font-semibold leading-[50px] low:text-2xl xsm:text-3xl lg:text-4xl'>{res.title}</div>
+                                                <div className='font-semibold leading-12.5 low:text-2xl xsm:text-3xl lg:text-4xl'>{res.title}</div>
                                                 {
                                                     res.purchaseColor ?
-                                                        <div className={`${res.purchaseColor} ${res.purchaseBGColor} text-lg rounded-lg px-[14px] py-[6px]`}>{res.purchaseType}</div>
+                                                        <div className={`${res.purchaseColor} ${res.purchaseBGColor} text-lg rounded-lg px-3.5 py-1.5`}>{res.purchaseType}</div>
                                                         :
-                                                        <div className={`text-lg rounded-lg px-[14px] py-[6px]`}>{res.purchaseType}</div>
+                                                        <div className={`text-lg rounded-lg px-3.5 py-1.5`}>{res.purchaseType}</div>
                                                 }
                                             </div>
                                         </div>
                                         <div className='low:text-lg xsm:text-xl lg:text-2xl'>{res.description}</div>
                                     </div>
-                                    <div className='space-y-[10px]'>
+                                    <div className='space-y-2.5'>
                                         <div className='bg-[#F9FAFC] low:p-2 xsm:p-3 lg:p-6 space-y-3 rounded-2xl'>
                                             <div className='space-y-1'>
-                                                <div className='w-fit px-2 py-[6px] rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>사이즈</div>
-                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-[38px]'>{res.size}</div>
+                                                <div className='w-fit px-2 py-1.5 rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>사이즈</div>
+                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-9.5'>{res.size}</div>
                                             </div>
                                             <div className='space-y-1'>
-                                                <div className='w-fit px-2 py-[6px] rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>색상</div>
-                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-[38px]'>{res.color}</div>
+                                                <div className='w-fit px-2 py-1.5 rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>색상</div>
+                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-9.5'>{res.color}</div>
                                             </div>
                                             <div className='space-y-1'>
-                                                <div className='w-fit px-2 py-[6px] rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>스펙</div>
-                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-[38px] whitespace-pre-wrap'>{res.spec}</div>
+                                                <div className='w-fit px-2 py-1.5 rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>스펙</div>
+                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-9.5 whitespace-pre-wrap'>{res.spec}</div>
                                             </div>
                                             <div className='space-y-1'>
-                                                <div className='w-fit px-2 py-[6px] rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>OS</div>
-                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-[38px]'>{res.os}</div>
+                                                <div className='w-fit px-2 py-1.5 rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>OS</div>
+                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-9.5'>{res.os}</div>
                                             </div>
                                             <div className='space-y-1'>
-                                                <div className='w-fit px-2 py-[6px] rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>옵션</div>
-                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-[38px] break-keep'>{res.option}</div>
+                                                <div className='w-fit px-2 py-1.5 rounded-md bg-[#E8EAED] font-medium text-[#535A64] leading-[19.09px]'>옵션</div>
+                                                <div className='low:text-lg xsm:text-xl lg:text-2xl text-[#393E45] leading-9.5 break-keep'>{res.option}</div>
                                             </div>
                                         </div>
                                         <button className='w-full py-4 rounded-lg bg-black text-white font-medium low:text-base xsm:text-lg lg:text-xl' onClick={() => {
