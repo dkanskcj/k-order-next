@@ -242,7 +242,7 @@ function Main() {
 
         // matchMedia 함수 이용하여 viewport 크기 기준으로 애니메이션 적용 가능
         const mobileCheck = gsap.matchMedia();
-        console.log(paradigmImgs)
+        
         mobileCheck.add({
             isDesktop: "(min-width: 1200px)",
             isMobile: "(max-width: 1199px)",
@@ -456,7 +456,7 @@ function Main() {
         <div className='imgContainer w-full pb-18 flex flex-col justify-center items-center'>
             <div className='max-w-[1920px] mcenter'>
                 <div className='banner'>
-                    <Image width={1878} height={480} src="/main/banner_editVer.svg" alt="" useMap='#test' />
+                    <Image width={1878} height={480} loading='eager' src="/main/banner_editVer.svg" alt="" useMap='#test' />
                     <map name="test" id='test' className='group cursor-pointer'>
                         <area shape="rect" coords="348,320,488,364" onClick={(event) => { getCoordnate(event) }} />
                     </map>
@@ -548,7 +548,7 @@ function Main() {
                                                 <div className='text-[18px] low:break-keep lg:whitespace-pre-wrap'>{res.content}</div>
                                             </div>
                                             <div className='w-full fcenter'>
-                                                <Image width={370} height={242.86} src={`${res.img[0]}`} alt="" />
+                                                <Image width={370} height={242} src={`${res.img[0]}`} alt="" />
                                             </div>
                                         </div>
                                     </Fragment>
