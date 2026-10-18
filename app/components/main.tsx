@@ -679,18 +679,7 @@ function Main() {
                     </div>
                     <div className='max-w-228 mcenter xsm:px-3 lg_p-0'>
                         <div className='fcenter bg-[#FDFCF4] gap-10 py-11 rounded-xl border border-[#EEECDC]'>
-                            {/* 카톡 아이콘 */}
-                            {/* <Image fill className='testImg left-[calc(110%)]' src={kakao} alt="" /> */}
                             <div className='sText space-y-2'>
-                                {/* 2024-11-14
-                                작업자: 김현우
-                                TODO: 오더위즈 쪽 카카오톡 링크가 전달되지 않아서 대표번호로 작성
-                                 */}
-                                {/* <div className='text-[18px] text-start font-medium leading-[21.48px]'>채팅 상담</div>
-                                <div className='fcenter gap-1 leading-[50.12px]'>
-                                    <div className='low:text-lg xsm:text-xl text-[42px] font-semibold'>카카오톡 문의하기</div>
-                                    <Image fill src={rArrow} alt="" />
-                                </div> */}
                                 <div className='w-full fcenter gap-10'>
                                     <div><Image width={88} height={88} src="/icons/phone.svg" alt="" /></div>
                                     <div className='space-y-2 text-start py-[4.5px]'>
